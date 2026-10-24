@@ -103,7 +103,7 @@ app.post('/api/mira/register', (req, res) => {
 
         const list = loadRegistrations();
 
-        # Prevent Duplicate Ticket IDs
+        // Prevent Duplicate Ticket IDs
         const existingIndex = list.findIndex(r => r.ticketId === body.ticketId);
         if (existingIndex >= 0) {
             list[existingIndex] = { ...list[existingIndex], ...body, updatedAt: new Date().toISOString() };
