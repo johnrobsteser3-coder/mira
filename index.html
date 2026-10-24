@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <title>MIRA | International Horse Racing Association</title>
+    <meta name="description" content="MIRA International Horse Racing Team Tournament, hosted by Titan Crown Racing. 24 Teams, 384 Players, 38,000 USDT weekly prize pool.">
+
+    <!-- OpenGraph & Twitter Card Meta Tags -->
+    <meta property="og:title" content="MIRA | International Racing Association">
+    <meta property="og:description" content="38,000 USDT Weekly Prize Pool. 24 Teams · 384 Players · Official International Horse Racing Tournament.">
+    <meta property="og:image" content="./assets/hero-art-2.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MIRA International Horse Racing Tournament">
+    <meta name="twitter:description" content="24 Elite Teams · 384 Competitive Players · Hosted by Titan Crown Racing.">
+    <meta name="twitter:image" content="./assets/hero-art-2.jpg">
+
+    <!-- Fonts & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css?v=3.0">
+</head>
+
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement">
+        MIRA · OFFICIAL TOURNAMENT POLICY PROPOSAL · SUBJECT TO FINAL MANAGEMENT APPROVAL
+    </div>
+
+    <!-- Sticky Header & Navigation -->
+    <header>
+        <nav class="wrap nav">
+            <a class="brand" href="#home">
+                <img src="./assets/mira-logo.jpg" alt="MIRA Logo" width="52" height="52">
+                <div>
+                    MIRA
+                    <small>INTERNATIONAL RACING</small>
+                </div>
+            </a>
+
+            <div class="links" id="nav-links">
+                <a href="#about">About</a>
+                <a href="#policy">Official Policy</a>
+                <a href="#prizes">Prizes</a>
+                <a href="#registration">Registration</a>
+                <a href="#payment">Payment</a>
+                <a href="./admin.html" style="color: var(--gold2); font-weight: 800;">🔑 Admin Portal</a>
+                <a href="#registration" class="btn gold small">Register Team</a>
+            </div>
+
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="wrap hero-grid">
+            <div>
+                <div class="kicker">TITAN CROWN RACING PRESENTS</div>
+                <h1>Where the world's <em>champions</em> race.</h1>
+                <p>24 elite teams. 384 competitive players. One weekly champion. The premier global horse racing team tournament promoting teamwork, competitive excellence, and international participation.</p>
+
+                <div class="actions">
+                    <button type="button" class="btn gold" onclick="selectRegistration('group')">🏆 Register Team (2,000 USDT)</button>
+                    <button type="button" class="btn ghost" onclick="selectRegistration('individual')">👤 Individual Player</button>
+                    <a href="#prizes" class="btn outline">💰 38,000 USDT Prizes</a>
+                </div>
+
+                <div class="fine">
+                    ✓ 10-Article Official Tournament Policy &nbsp;•&nbsp; Verified Standings &nbsp;•&nbsp; Direct USDT TRC20 Payouts
+                </div>
+            </div>
+
+            <div class="hero-art">
+                <img src="./assets/hero-art-2.jpg" alt="MIRA Racing Tournament Art" width="490" height="490">
+                <div class="art-tag">
+                    24 TEAMS · 384 PLAYERS
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KPI Stats Bar -->
+    <div class="wrap">
+        <div class="stats">
+            <div class="stat">
+                <strong>38,000 USDT</strong>
+                <span>Weekly Prize Pool</span>
+            </div>
+            <div class="stat">
+                <strong>24 Teams</strong>
+                <span>384 Total Participants</span>
+            </div>
+            <div class="stat">
+                <strong>2,000 USDT</strong>
+                <span>Team Registration Fee</span>
+            </div>
+            <div class="stat">
+                <strong>48,000 USDT</strong>
+                <span>Projected Collections</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About & Overview Section -->
+    <section id="about">
+        <div class="wrap">
+            <div class="sectionhead">
+                <div>
+                    <span class="tag">Overview</span>
+                    <h2>Built for racing excellence.</h2>
+                </div>
+                <p>MIRA brings together 24 top racing teams into a structured weekly international tournament framework hosted by Titan Crown Racing.</p>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="icon">🏆</div>
+                    <h3>Weekly Championship</h3>
+                    <p>First-Place Victory Points System across officially designated races. Total points earned by all 16 registered players determine weekly standing.</p>
+                    <button type="button" class="btn outline" onclick="selectRegistration('group')">Join Weekly Championship</button>
+                </div>
+
+                <div class="card highlight">
+                    <div class="icon">👥</div>
+                    <h3>24 International Teams</h3>
+                    <p>24 teams of 16 players (384 total competitors). Ranks 1–4 receive championship placements, ranks 5–12 receive consolation prizes.</p>
+                    <button type="button" class="btn gold" onclick="selectRegistration('group')">Register 16-Player Team</button>
+                </div>
+
+                <div class="card">
+                    <div class="icon">📜</div>
+                    <h3>Transparent Accounting</h3>
+                    <p>48,000 USDT projected collections: 38,000 USDT to team prizes and 10,000 USDT to operations, tech support, and promotion.</p>
+                    <a href="#prizes" class="btn outline">View Prize Breakdown</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFICIAL POLICY GUIDELINES (10 ARTICLES) -->
+    <section class="alt" id="policy">
+        <div class="wrap">
+            <div class="sectionhead">
+                <div>
+                    <span class="tag">Official Guidelines</span>
+                    <h2>Ten-Article Tournament Policy Proposal</h2>
+                </div>
+                <p>Review the complete ten-article policy proposal before joining a team or submitting registration payment.</p>
+            </div>
+
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <details open>
+                    <summary>ARTICLE I — Tournament Overview <span>+</span></summary>
+                    <p>Titan Crown Racing hosts a weekly international horse racing team tournament promoting teamwork, competitive excellence, sportsmanship and international participation. The competition comprises 24 teams of 16 players each.</p>
+                </details>
+
+                <details>
+                    <summary>ARTICLE II — Registration &amp; Participation <span>+</span></summary>
+                    <p>24 teams · 16 registered players per team · 384 total participants · 2,000 USDT registration fee per team · 48,000 USDT projected total collections. Teams must register with the official host, provide a complete roster before the announced deadline, and receive confirmation of payment before participating.</p>
+                </details>
+
+                <details>
+                    <summary>ARTICLE III — Scoring System <span>+</span></summary>
+                    <p>The weekly championship uses a First-Place Victory Points System. Only officially designated tournament races count toward team rankings. The host must publish the detailed points schedule before registration closes.</p>
+                </details>
+
+                <details>
+                    <summary>ARTICLE IV — Weekly Team Rankings <span>+</span></summary>
+                    <p>The total points earned by all 16 registered players determine each team’s weekly standing. Ranks 1–4 receive championship placements, ranks 5–12 receive consolation prizes, and ranks 13–24 remain official tournament participants.</p>
+                </details>
+
+                <details>
+                    <summary>ARTICLE V — Prize Distribution <span>+</span></summary>
+                    <p>The proposed weekly prize pool is 38,000 USDT, distributed to teams ranked 1st through 12th. The remaining 10,000 USDT of projected team fees is allocated to approved administration, operations, technical support and promotion, with transparent financial reporting. Prizes are subject to verification and applicable law.</p>
+                </details>
+
+                <details>
+                    <summary>ARTICLE VI — Tie-Breaking <span>+</span></summary>
+                    <p>Ties are resolved by (1) number of first-place finishes, (2) number of second-place finishes, (3) number of third-place finishes, and (4) an officially supervised tie-breaker race under conditions announced in advance.</p>
+                </details>
+
+                <details>
+                    <summary>ARTICLE VII — Responsibilities &amp; Fair Play <span>+</span></summary>
+                    <p>Race manipulation, false results, unauthorized roster changes, collusion, fraud, interference, unauthorized software and exploits are prohibited. Investigations may result in point deductions, prize forfeiture or disqualification.</p>
+                </details>
+
+                <details>
+                    <summary>ARTICLE VIII — Results &amp; Prize Distribution <span>+</span></summary>
+                    <p>The host maintains verified weekly standings, first-place victories and team totals. Final results follow verification. Payment deadlines, wallets, deductions and protest periods must be disclosed before registration.</p>
+                </details>
+
+                <details>
+                    <summary>ARTICLE IX — Management &amp; Authority <span>+</span></summary>
+                    <p>Titan Crown Racing manages registration, roster verification, scheduling, results, rankings, prize accounting, dispute resolution and policy announcements. Operations involving fees or monetary prizes are subject to applicable laws, gaming rules, licenses and platform requirements; no event begins before required authorizations.</p>
+                </details>
+
+                <details>
+                    <summary>ARTICLE X — Official Declaration <span>+</span></summary>
+                    <p><strong>24 ELITE TEAMS. 384 COMPETITIVE PLAYERS. ONE WEEKLY CHAMPION.</strong> Every victory counts. Every point matters. Every team has an opportunity to rise to the top. Official policy proposal subject to review, regulatory compliance and final management approval.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisions & Prizes Section -->
+    <section id="prizes">
+        <div class="wrap">
+            <div class="sectionhead">
+                <div>
+                    <span class="tag">Prizes &amp; Rewards</span>
+                    <h2>38,000 USDT weekly prize pool.</h2>
+                </div>
+                <p>Distributed across teams ranked 1st through 12th in weekly standings.</p>
+            </div>
+
+            <div class="two">
+                <!-- Prize Table -->
+                <div class="prize-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Placement Category</th>
+                                <th>Prize Allocation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="rank">🥇</span></td>
+                                <td>1st Place Champion</td>
+                                <td>15,000 USDT</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank">🥈</span></td>
+                                <td>2nd Place Runner-Up</td>
+                                <td>9,000 USDT</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank">🥉</span></td>
+                                <td>3rd Place Finalist</td>
+                                <td>5,000 USDT</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank">4th</span></td>
+                                <td>4th Place Finalist</td>
+                                <td>3,000 USDT</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rank">5-12</span></td>
+                                <td>Consolation Prizes (8 Teams)</td>
+                                <td>750 USDT ea. (6,000 USDT Total)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="total">
+                        <span>Weekly Prize Pool (1st-12th)</span>
+                        <span>38,000 USDT</span>
+                    </div>
+                </div>
+
+                <!-- Division Features -->
+                <div class="feature">
+                    <span class="number">24</span>
+                    <h3>24 Elite Teams · 384 Players</h3>
+                    <p>Each team consists of 16 registered competitors. Total points accumulated by all 16 members determine weekly team standings under the First-Place Victory Points System.</p>
+                    <ul>
+                        <li><strong>Registration Fee:</strong> 2,000 USDT per team (48,000 USDT total)</li>
+                        <li><strong>Prizes:</strong> 38,000 USDT to top 12 teams</li>
+                        <li><strong>Operations:</strong> 10,000 USDT allocated to technical &amp; broadcast support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Registration Form -->
+    <section class="alt" id="registration">
+        <div class="wrap">
+            <div class="sectionhead">
+                <div>
+                    <span class="tag">Tournament Entry</span>
+                    <h2 id="formTitle">Group / Team Registration</h2>
+                </div>
+                <p>Complete official registration and submit your 16-player roster below.</p>
+            </div>
+
+            <div class="two">
+                <div>
+                    <form id="regForm">
+                        <input type="hidden" id="regType" value="group">
+
+                        <div class="formgrid">
+                            <div class="field">
+                                <label for="name">Contact Full Name *</label>
+                                <input id="name" type="text" required maxlength="90" placeholder="Your full name">
+                            </div>
+                            <div class="field">
+                                <label for="email">Contact Email *</label>
+                                <input id="email" type="email" required placeholder="captain@example.com">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="country">Country / Region *</label>
+                            <input id="country" type="text" required placeholder="e.g. United Kingdom, Philippines, USA">
+                        </div>
+
+                        <!-- Group Fields -->
+                        <div id="groupFields">
+                            <div class="formgrid">
+                                <div class="field">
+                                    <label for="team">Official Team Name *</label>
+                                    <input id="team" type="text" required placeholder="e.g. Apex Stallions">
+                                </div>
+                                <div class="field">
+                                    <label for="captain">Team Captain Game ID *</label>
+                                    <input id="captain" type="text" required placeholder="Captain Game ID">
+                                </div>
+                            </div>
+
+                            <div class="field" style="margin-top: 10px;">
+                                <label>16 Player Roster Game IDs *</label>
+                                <div class="roster" id="roster">
+                                    <!-- Populated dynamically by app.js -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notice">
+                            ℹ️ <strong>Official Entry Fee:</strong> Team registration requires <strong>2,000 USDT (TRC20)</strong> per team. Registration ticket generated upon submission.
+                        </div>
+
+                        <button type="submit" class="btn gold" style="width: 100%; padding: 16px;">
+                            🚀 Complete Registration &amp; Generate Ticket
+                        </button>
+                    </form>
+
+                    <!-- Registration Ticket Receipt Output -->
+                    <div id="regResult" class="hidden"></div>
+                </div>
+
+                <!-- Payment Section -->
+                <div class="payment" id="payment">
+                    <span class="tag">USDT TRC20 Payment</span>
+                    <h3 style="margin: 12px 0 6px;">Team Registration Fee</h3>
+                    <div class="amount">2,000 USDT</div>
+                    <p style="color: var(--muted); font-size: 13px;">Send payment via TRON Network (TRC20) to the official MIRA tournament treasury wallet:</p>
+
+                    <code id="usdt-wallet-address">
+                        TYm82KqLzGfM4vX2P9qL00188402918237
+                    </code>
+
+                    <button type="button" class="btn ghost" onclick="copyUsdtAddress()">
+                        📋 Copy USDT TRC20 Address
+                    </button>
+
+                    <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #283a4f;">
+                        <h4 style="color: var(--gold2); font-size: 14px; margin-bottom: 8px;">Confirm Payment (TxHash)</h4>
+                        <div class="field">
+                            <input type="text" id="txHashInput" placeholder="Enter TRON Transaction Hash (TxHash)">
+                        </div>
+                        <button type="button" class="btn gold" style="width: 100%; margin-top: 10px;" onclick="submitPaymentTx()">
+                            ✓ Submit TxHash Confirmation
+                        </button>
+                        <div id="paymentConfirmationMsg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wrap footgrid">
+            <div>
+                <a class="brand" href="#home">
+                    <img src="./assets/mira-logo.jpg" alt="MIRA Logo" width="40" height="40">
+                    <span>MIRA</span>
+                </a>
+                <p style="margin-top: 12px;">
+                    MIRA International Horse Racing Association. Hosted by Titan Crown Racing.<br>
+                    Official Tournament Policy &amp; Registration Portal. Copyright &copy; 2026. All rights reserved.
+                </p>
+            </div>
+
+            <div>
+                <div style="font-weight: 800; color: var(--gold); margin-bottom: 12px; font-size: 12px; text-transform: uppercase;">Quick Links</div>
+                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+                    <a href="#about">About MIRA</a>
+                    <a href="#policy">Official Policy (10 Articles)</a>
+                    <a href="#prizes">Prize Breakdown</a>
+                    <a href="#registration">Register Team</a>
+                    <a href="#payment">Payment Options</a>
+                    <a href="./admin.html" style="color: var(--gold);">Organizer Admin Portal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application JavaScript -->
+    <script src="./app.js?v=3.0"></script>
+</body>
+
+</html>

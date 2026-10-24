@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MIRA Admin Portal | Organizer Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css?v=2.0">
+</head>
+
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement">
+        MIRA ORGANIZER DASHBOARD · TOURNAMENT ADMINISTRATION PORTAL
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="wrap nav">
+            <a class="brand" href="./index.html">
+                <img src="./assets/mira-logo.jpg" alt="MIRA Logo" width="52" height="52">
+                <div>
+                    MIRA ADMIN
+                    <small>ORGANIZER PORTAL</small>
+                </div>
+            </a>
+
+            <div class="links">
+                <a href="./index.html">← Back to Main Website</a>
+                <button type="button" class="btn ghost small" onclick="adminLogout()">Log Out</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Admin Authentication View -->
+    <section id="adminAuthSection" style="padding: 100px 0;">
+        <div class="wrap" style="max-width: 450px;">
+            <div class="card">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <div style="font-size: 40px;">🔑</div>
+                    <h2 style="font-family: Georgia, serif; color: var(--gold2);">Organizer Login</h2>
+                    <p style="color: var(--muted); font-size: 13px;">Enter admin passphrase to manage MIRA teams &amp; payments</p>
+                </div>
+
+                <div class="field">
+                    <label for="adminPassword">Admin Passphrase</label>
+                    <input type="password" id="adminPassword" placeholder="Enter admin password">
+                </div>
+
+                <button type="button" class="btn gold" style="width: 100%; margin-top: 16px;" onclick="authenticateAdmin()">
+                    Access Admin Portal ➔
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Dashboard View (Protected) -->
+    <section id="adminDashboardSection" class="hidden" style="padding: 40px 0 80px;">
+        <div class="wrap">
+            <div class="sectionhead">
+                <div>
+                    <span class="tag">Tournament Control Center</span>
+                    <h2>MIRA Teams &amp; Payments Manager</h2>
+                </div>
+                <div>
+                    <button type="button" class="btn gold small" onclick="exportRostersCSV()">📥 Export Rosters (CSV)</button>
+                </div>
+            </div>
+
+            <!-- Dashboard Stats Bar -->
+            <div class="stats" style="margin-top: 0; margin-bottom: 30px;">
+                <div class="stat">
+                    <strong id="statTotalTeams">0</strong>
+                    <span>Total Registered Teams</span>
+                </div>
+                <div class="stat">
+                    <strong id="statPendingPayments" style="color: #f59e0b;">0</strong>
+                    <span>Pending Payments</span>
+                </div>
+                <div class="stat">
+                    <strong id="statConfirmedTeams" style="color: #10b981;">0</strong>
+                    <span>Confirmed Spots</span>
+                </div>
+                <div class="stat">
+                    <strong id="statPrizeEscrow" style="color: var(--gold2);">0 USDT</strong>
+                    <span>Entry Fees Received</span>
+                </div>
+            </div>
+
+            <!-- Teams Table Container -->
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ticket ID</th>
+                            <th>Team / Player Name</th>
+                            <th>Captain Email</th>
+                            <th>Country</th>
+                            <th>TxHash</th>
+                            <th>Status</th>
+                            <th class="right">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminTeamsTbody">
+                        <!-- Populated dynamically by app.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roster Inspection Modal -->
+    <div id="rosterModal" class="modal-overlay hidden">
+        <div class="modal-dialog">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <h3 style="color: var(--gold2); margin: 0;" id="rosterModalTitle">16-Player Roster Inspection</h3>
+                <button type="button" style="background: none; border: none; color: #fff; font-size: 20px;" onclick="closeRosterModal()">✕</button>
+            </div>
+            <div id="rosterModalBody" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; font-family: monospace; font-size: 13px; color: #a3b8cc;">
+                <!-- Populated dynamically -->
+            </div>
+            <button type="button" class="btn ghost" style="width: 100%; margin-top: 20px;" onclick="closeRosterModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Application JavaScript -->
+    <script src="./app.js?v=2.0"></script>
+</body>
+
+</html>
