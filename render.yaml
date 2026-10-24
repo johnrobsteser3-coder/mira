@@ -1,13 +1,14 @@
 services:
   - type: web
     name: mira
-    env: static
-    buildCommand: ""
-    staticPublishPath: .
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    disk:
+      name: mira-persistent-disk
+      mountPath: /data
+      sizeGB: 1
     routes:
       - type: rewrite
         source: /admin
         destination: /admin.html
-      - type: rewrite
-        source: /*
-        destination: /index.html
